@@ -1,0 +1,207 @@
+mat-toolbar {
+    background: #004a9f;
+    color: white;
+}
+
+mat-sidenav {
+    margin: 16px;
+    width: 200px;
+    border-right: none;
+    background: #002b5c;
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+}
+
+// .content {
+//     height: calc(100vh - 98px);
+//     border-radius: 1px;
+//     margin: 16px;
+//     margin-left: 32px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+   
+//     font-size: 2rem;
+//     color: lightgray;
+
+//      width: 20%;
+//      display: flex;
+ 
+// }
+
+
+//  .content2{
+
+//     height: calc(100vh - 98px);
+//     border-radius: 10px;
+//     margin: 16px;
+//     margin-left: 32px;
+
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+//     font-size: 2rem;
+//     color: lightgray;
+       
+//     width: 20%;
+//     position: relative;
+//     left: 20.2%;
+//     bottom: 98.1%;
+//     width: 77%;
+    
+    
+//  }
+
+  
+  .split {
+    height: 98%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .left {
+    left: 0;
+    
+    width: 30%;
+  }
+  
+  .right {
+    right: 0;
+    background-color: lightsteelblue;
+    width: 70%;
+    
+  }
+  
+  .centered {
+   
+    text-align: center;
+
+  }
+  .center{
+      text-align: center;
+  }
+.btn{
+    background-color: whitesmoke;
+}
+  
+mat-sidenav-container {
+    height: calc(100vh - 65px);
+    
+}
+
+.menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+
+    mat-icon {
+        margin-right: 8px;
+        
+    }
+}
+
+.avatar {
+    margin-top: 16px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    
+}
+
+.name {
+    margin-top: 8px;
+    font-weight: normal;
+    
+}
+
+.designation {
+    margin-top: 2px;
+    font-size: 0.7rem;
+    color: lightgrey;
+    
+}
+
+mat-divider {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+    
+}
+
+.avatar{
+    margin-left: 35%;
+}
+
+.chat-container{
+    height: 500px;
+    width: 100vw;
+  }
+  .chat{
+    text-align: left;
+    margin-left: 18%;
+    width: 34%;
+    height: 100%;
+    border: 1px solid grey;
+    
+  }
+  
+  .footer{
+    background: #cccccc;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    width: 100vw;
+  }
+  .send-button{
+    margin: 0 auto;
+    height: 70%;
+    width: 30%;
+  }
+  input{
+    float: right;
+    height: 30px;
+    border-radius: 15px;
+    font-size: 1.5em;
+  }
+  .send{
+    float: right;
+    color: blue;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 80px;
+    margin-left: 5px;
+  
+  }
+
+  .user{
+
+    position: relative;
+    right: 280px;
+
+  }
+
+table{
+
+    width: 90%;
+    padding-left: 70px;
+}
+
+.go{
+
+    font-size: 5em;
+    position: relative;
+    left: 39%;
+    margin-top: 10%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100px;
+  }

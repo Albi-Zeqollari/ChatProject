@@ -1,0 +1,78 @@
+<mat-toolbar class="mat-elevation-z8">
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+{{newUser.name}}
+
+
+</mat-toolbar>
+
+<mat-sidenav-container >
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+
+    <div class="avatar">
+    <ngx-avatar  bgColor="white" fgColor="black"  name="{{newUser.name}}" class="avatar mat-elevation-z8" ></ngx-avatar>
+    </div>
+        <h4 class="name">{{newUser.username}}</h4>
+        
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button" (click)="gotoInbox(newUser.id)">
+            <mat-icon>chat</mat-icon>
+            <span>Inbox</span>
+        </button>
+        
+        <button mat-button class="menu-button" (click)="edit(newUser.id)">
+            <mat-icon>person</mat-icon>
+            <span>Edit Profile</span>
+        </button>
+
+        <mat-divider></mat-divider>
+        <button mat-button class="menu-button" routerLink="/login" (click)="logoutSnackbar()">
+            <mat-icon>subdirectory_arrow_left</mat-icon>
+            <span>Log out</span>
+        </button>
+
+    </mat-sidenav>
+   
+    <mat-sidenav-content>
+
+    
+        <div class="split left">
+            <button class="chatroom" mat-button (click)="goToCreateGroup(newUser.id)"><mat-icon matTooltip="Create Room">fiber_new</mat-icon></button>
+            <div class="center">
+            <h2>Chats</h2>
+            <div *ngFor="let chat of chatt">
+
+
+                    <button mat-button (click)="viewChatRoom(chat.id,newUser.id)">{{chat.chatName}}</button>
+
+                    <button mat-button *ngIf="chat.adminId == newUser.id" (click)="deleteChat(chat.adminId)"><mat-icon matTooltip="Delete room">delete</mat-icon></button> 
+
+                    <button *ngIf="chat.adminId == newUser.id" mat-button (click)="editChat(chat.id)"><mat-icon matTooltip="Edit room">edit</mat-icon></button> 
+                </div>
+            
+               
+            </div>
+  
+            
+        </div>
+   
+    </mat-sidenav-content>
+   
+</mat-sidenav-container>
+
+
+
+
+
+
+
+
+      

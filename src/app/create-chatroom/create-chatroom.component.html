@@ -1,0 +1,50 @@
+<mat-card class="mat-elevation-z12" >
+    
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+      <mat-tab>
+
+<mat-card-content >
+<div class="dashboard">
+    <form  class="form">
+        <h1>Create chat/Create Group </h1>
+    
+        <div class="form-group">
+            <mat-form-field appearance="fill" floatLabel="never" [style.width.px]=327>
+            <mat-label>Name</mat-label>
+            <input matInput type="text"  class="form-control" id="name" [(ngModel)]="chat.chatName"
+             name="Name" required >
+        </mat-form-field>
+        </div>
+
+
+        <div class="form-group"> 
+
+
+            <mat-form-field appearance="fill" loatLabel="never" [style.width.px]=327  >
+             <mat-label>Users you want to include</mat-label>
+ 
+             <mat-select  [(ngModel)]='chat.usersListId' name="name" multiple >
+               <mat-option  *ngFor="let u of users" [value]="u" >
+
+                {{u.name}} 
+               </mat-option>
+         
+             </mat-select>
+           </mat-form-field> 
+       
+         </div>
+        
+        <br>
+        <button mat-button color="primary" (click)="onSubmit()">Save</button>
+
+        <button mat-button class="bt" (click)="goBack()"> Close</button>
+    
+    </form>
+    <br>
+    </div>
+</mat-card-content>
+</mat-tab>
+    </mat-tab-group>
+</mat-card>
+
+
